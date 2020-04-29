@@ -11,9 +11,11 @@ import emojiSuggestionsStrategy from './emojiSuggestionsStrategy';
 import attachImmutableEntitiesToEmojis from './modifiers/attachImmutableEntitiesToEmojis';
 import defaultPositionSuggestions from './utils/positionSuggestions';
 import emojiList from './utils/emojiList';
+import addEmoji from './modifiers/addEmoji';
+
 import { defaultTheme } from './theme.js';
 
-import { clearEmojiList, mergeEmojiList } from "./utils/mayhemEmojione";
+import { clearEmojiList, mergeEmojiList, setEmojiImageNameGetter } from "./utils/mayhemEmojione";
 
 export { defaultTheme };
 
@@ -110,6 +112,10 @@ export default (config = {}) => {
   // Expose some of this plugins state to the invoker so that they can control some core pieces
   if (expose) {
     expose({
+      modifiers: {
+        addEmoji: addEmoji,
+        attachImmutableEntitiesToEmojis: attachImmutableEntitiesToEmojis,
+      },
       setPriorityList: emojiList.setPriorityList,
       setEmojiImageNameGetter: setEmojiImageNameGetter,
       clearEmojiList: clearEmojiList,
