@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import mayhemEmojione from '../../utils/mayhemEmojione';
+import mayhemEmojione, {MAYHEM_EMOJI_CONFIG} from '../../utils/mayhemEmojione';
 
 const Emoji = ({
   theme = {},
@@ -21,10 +21,8 @@ const Emoji = ({
     );
   } else {
     // short name to image url code steal from emojione source code
-    const shortNameForImage =
-      mayhemEmojione.emojioneList[shortName].unicode[
-      mayhemEmojione.emojioneList[shortName].unicode.length - 1
-      ];
+    const emojiObj = mayhemEmojione.emojioneList[this.props.emoji];
+    const shortNameForImage = MAYHEM_EMOJI_CONFIG.getShortnameFromEmoji(emojiObj);
     const backgroundImage = `url(${imagePath}${shortNameForImage}.${imageType}${cacheBustParam})`;
     const combinedClassName = clsx(theme.emoji, className);
 

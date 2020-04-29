@@ -13,11 +13,13 @@ import defaultPositionSuggestions from './utils/positionSuggestions';
 import emojiList from './utils/emojiList';
 import { defaultTheme } from './theme.js';
 
+import { clearEmojiList, mergeEmojiList } from "./utils/mayhemEmojione";
+
 export { defaultTheme };
 
-const defaultImagePath = '//cdn.jsdelivr.net/emojione/assets/svg/';
+const defaultImagePath = '//twemoji.maxcdn.com/svg/'; // Update to point to twitter emoji by default
 const defaultImageType = 'svg';
-const defaultCacheBustParam = '?v=2.2.7';
+const defaultCacheBustParam = '?v=1.0.0'; // We are now on version 1.0.0 of our emojis.
 
 // TODO activate/deactivate different the conversion or search part
 
@@ -85,12 +87,36 @@ export default (config = {}) => {
     selectButtonContent,
     toneSelectOpenDelay,
     useNativeArt,
+    emojiListOverride,
+    emojiImageNameGetter,
+    expose,
   } = config;
 
   const cacheBustParam = allowImageCache ? '' : defaultCacheBustParam;
 
+  // Adjust the plugin to accept an emoji list to merge.
+  if (emojiListOverride) {
+    mergeEmojiList(emojiListOverride);
+  }
+
+  // Update the name getter if possible, this allows us to define what name to use for this image.
+  if (emojiImageNameGetter) {
+    setEmojiImageNameGetter(emojiImageNameGetter);
+  }
+
   // if priorityList is configured in config then set priorityList
   if (priorityList) emojiList.setPriorityList(priorityList);
+
+  // Expose some of this plugins state to the invoker so that they can control some core pieces
+  if (expose) {
+    expose({
+      setPriorityList: emojiList.setPriorityList,
+      setEmojiImageNameGetter: setEmojiImageNameGetter,
+      clearEmojiList: clearEmojiList,
+      mergeEmojiList: mergeEmojiList,
+    });
+  }
+
   const suggestionsProps = {
     ariaProps,
     cacheBustParam,

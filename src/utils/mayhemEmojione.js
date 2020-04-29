@@ -1,19 +1,22 @@
 import emojione from 'emojione';
 
-import SUPPORTED_EMOJIS from "../constants/supportedEmojis";
-
-const getMayhemEmojis = () => {
-  return (
-    Object.keys(emojione.emojioneList)
-      .filter(key => SUPPORTED_EMOJIS.includes(emojione.toShort(key)))
-      .reduce((obj, key) => {
-        obj[key] = emojione.emojioneList[key];
-        return obj;
-      }, {})
-  );
+export const MAYHEM_EMOJI_CONFIG = {
+  getShortnameFromEmoji: () => "",
 };
 
-const MAYHEM_EMOJIS = getMayhemEmojis();
+const MAYHEM_EMOJIS = {};
+
+export const mergeEmojiList = (emojiList) => {
+  Object.assign(MAYHEM_EMOJIS, emojiList);
+};
+
+export const clearEmojiList = () => {
+  Object.keys(MAYHEM_EMOJIS).forEach(function(key) { delete object[key]; });
+};
+
+export const setEmojiImageNameGetter = (callback) => {
+  MAYHEM_EMOJI_CONFIG.getShortnameFromEmoji = callback;
+};
 
 export default {
   ...emojione,
