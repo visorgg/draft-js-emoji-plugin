@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import mayhemEmojione, {MAYHEM_EMOJI_CONFIG} from '../../../../utils/mayhemEmojione';
+import mayhemEmoji from '../../../../utils/mayhemEmoji';
 import emojiList from '../../../../utils/emojiList';
 import convertShortNameToUnicode from '../../../../utils/convertShortNameToUnicode';
 
@@ -73,8 +73,8 @@ export default class Entry extends Component {
       emojiDisplay = convertShortNameToUnicode(unicode);
     } else {
       // short name to image url code steal from emojione source code
-      const emojiObj = mayhemEmojione.emojioneList[this.props.emoji];
-      const shortNameForImage = MAYHEM_EMOJI_CONFIG.getShortnameFromEmoji(emojiObj);
+      const emojiObj = mayhemEmoji.emojiList[this.props.emoji];
+      const shortNameForImage = mayhemEmoji.getShortnameFromEmoji(emojiObj);
       const fullImagePath = `${imagePath}${shortNameForImage}.${imageType}${cacheBustParam}`;
       emojiDisplay = (
         <img

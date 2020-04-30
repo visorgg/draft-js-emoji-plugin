@@ -15,7 +15,7 @@ import addEmoji from './modifiers/addEmoji';
 
 import { defaultTheme } from './theme.js';
 
-import { clearEmojiList, mergeEmojiList, setEmojiImageNameGetter } from "./utils/mayhemEmojione";
+import { clearEmojiList, mergeEmojiList, setEmojiImageNameGetter, setShortNameGetter } from "./utils/mayhemEmoji";
 
 export { defaultTheme };
 
@@ -119,6 +119,7 @@ export default (config = {}) => {
       },
       setPriorityList: emojiList.setPriorityList,
       setEmojiImageNameGetter: setEmojiImageNameGetter,
+      setShortNameGetter: setShortNameGetter,
       clearEmojiList: clearEmojiList,
       mergeEmojiList: mergeEmojiList,
     });

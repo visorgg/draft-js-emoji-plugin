@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import mayhemEmojione, {MAYHEM_EMOJI_CONFIG} from '../../utils/mayhemEmojione';
+import mayhemEmoji from '../../utils/mayhemEmoji';
 
 const Emoji = ({
   theme = {},
@@ -12,24 +12,24 @@ const Emoji = ({
   useNativeArt,
   ...props
 }) => {
-  const shortName = mayhemEmojione.toShort(decoratedText);
+  const shortName = mayhemEmoji.toShort(decoratedText);
 
   let emojiDisplay = null;
   if (useNativeArt === true) {
     emojiDisplay = (
-      <span title={mayhemEmojione.toShort(decoratedText)}>{props.children}</span>
+      <span title={mayhemEmoji.toShort(decoratedText)}>{props.children}</span>
     );
   } else {
     // short name to image url code steal from emojione source code
-    const emojiObj = mayhemEmojione.emojioneList[shortName];
-    const shortNameForImage = MAYHEM_EMOJI_CONFIG.getShortnameFromEmoji(emojiObj);
+    const emojiObj = mayhemEmoji.emojiList[shortName];
+    const shortNameForImage = mayhemEmoji.getShortnameFromEmoji(emojiObj);
     const backgroundImage = `url(${imagePath}${shortNameForImage}.${imageType}${cacheBustParam})`;
     const combinedClassName = clsx(theme.emoji, className);
 
     emojiDisplay = (
       <span
         className={combinedClassName}
-        title={mayhemEmojione.toShort(decoratedText)}
+        title={mayhemEmoji.toShort(decoratedText)}
         style={{ backgroundImage }}
       >
         {props.children}

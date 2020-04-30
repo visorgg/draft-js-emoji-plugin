@@ -1,7 +1,7 @@
 import findWithRegex from 'find-with-regex';
-import mayhemEmojione from './utils/mayhemEmojione';
+import mayhemEmoji from './utils/mayhemEmoji';
 
-const unicodeRegex = new RegExp(mayhemEmojione.unicodeRegexp, 'g');
+const unicodeRegex = new RegExp(mayhemEmoji.unicodeRegexp, 'g');
 
 export default (contentBlock: Object, callback: Function) => {
   findWithRegex(unicodeRegex, contentBlock, callback);
