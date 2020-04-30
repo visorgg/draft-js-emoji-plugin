@@ -99,6 +99,7 @@ export default (config = {}) => {
   // Adjust the plugin to accept an emoji list to merge.
   if (emojiListOverride) {
     mergeEmojiList(emojiListOverride);
+    emojiList.setPriorityList({})
   }
 
   // Update the name getter if possible, this allows us to define what name to use for this image.
