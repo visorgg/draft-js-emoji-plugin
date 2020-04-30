@@ -11,7 +11,7 @@ const Mode = {
 };
 
 const addEmoji = (editorState, emojiShortName, mode = Mode.INSERT) => {
-  const unicode = emojiList.list[emojiShortName][0];
+  const unicode = emojiList.list[emojiShortName];
   const emoji = convertShortNameToUnicode(unicode);
 
   const contentState = editorState.getCurrentContent();

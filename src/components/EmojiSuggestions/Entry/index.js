@@ -50,7 +50,7 @@ export default class Entry extends Component {
 
     let emojiDisplay = null;
     if (useNativeArt === true) {
-      const unicode = emojiList.list[this.props.emoji][0];
+      const unicode = emojiList.list[this.props.emoji];
       emojiDisplay = convertShortNameToUnicode(unicode);
     } else {
       // short name to image url code steal from emojione source code
