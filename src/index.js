@@ -91,16 +91,11 @@ export default (config = {}) => {
     emojiListOverride,
     emojiImageNameGetter,
     shortNameGetter,
+    unicodeGetter,
     expose,
   } = config;
 
   const cacheBustParam = allowImageCache ? '' : defaultCacheBustParam;
-
-  // Adjust the plugin to accept an emoji list to merge.
-  if (emojiListOverride) {
-    mergeEmojiList(emojiListOverride);
-    emojiList.setPriorityList({})
-  }
 
   // Update the name getter if possible, this allows us to define what name to use for this image.
   if (emojiImageNameGetter) {
@@ -111,8 +106,15 @@ export default (config = {}) => {
     setShortNameGetter(shortNameGetter);
   }
 
-  // if priorityList is configured in config then set priorityList
-  if (priorityList) emojiList.setPriorityList(priorityList);
+  // Adjust the plugin to accept an emoji list to merge.
+  if (emojiListOverride) {
+    mergeEmojiList(emojiListOverride);
+  }
+
+  if (unicodeGetter) emojiList.setUnicodeGetter(unicodeGetter);
+
+  // Populate the emojiList
+  emojiList.setPriorityList(priorityList || {});
 
   // Expose some of this plugins state to the invoker so that they can control some core pieces
   if (expose) {
