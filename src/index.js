@@ -91,6 +91,7 @@ export default (config = {}) => {
     useNativeArt,
     emojiListOverride,
     emojiImageNameGetter,
+    shortNameGetter,
     expose,
   } = config;
 
@@ -105,6 +106,10 @@ export default (config = {}) => {
   // Update the name getter if possible, this allows us to define what name to use for this image.
   if (emojiImageNameGetter) {
     setEmojiImageNameGetter(emojiImageNameGetter);
+  }
+
+  if (shortNameGetter) {
+    setShortNameGetter(shortNameGetter);
   }
 
   // if priorityList is configured in config then set priorityList

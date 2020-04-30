@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3439b0cc-997f-408e-9a67-4d6d9eb07259" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/mayhemEmoji.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.cjs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.esm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/plugin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Emoji/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Emoji/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EmojiSelect/Popover/Entry/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EmojiSelect/Popover/Entry/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EmojiSuggestions/Entry/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EmojiSuggestions/Entry/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/emojiStrategy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/emojiStrategy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modifiers/attachImmutableEntitiesToEmojis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modifiers/attachImmutableEntitiesToEmojis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/emojiList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/emojiList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mayhemEmojione.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="122" column="37" lean-forward="true" selection-start-line="122" selection-start-column="37" selection-end-line="122" selection-end-column="37" />
+            <state relative-caret-position="156">
+              <caret line="110" column="24" lean-forward="true" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -112,11 +97,11 @@
         <option value="$PROJECT_DIR$/src/utils/emojiList.js" />
         <option value="$PROJECT_DIR$/src/utils/mayhemEmojione.js" />
         <option value="$PROJECT_DIR$/src/utils/mayhemEmoji.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/EmojiSuggestions/Entry/index.js" />
         <option value="$PROJECT_DIR$/src/components/EmojiSelect/Popover/Entry/index.js" />
         <option value="$PROJECT_DIR$/src/components/Emoji/index.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
       </list>
     </option>
   </component>
@@ -350,14 +335,36 @@
       <option name="project" value="LOCAL" />
       <updated>1588205830273</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Removing emojione">
+      <created>1588222052523</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1588222052523</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Removing emojione">
+      <created>1588222062875</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1588222062875</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Removing emojione">
+      <created>1588222070642</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1588222070642</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12742000" />
+    <option name="totallyTimeSpent" value="12821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="244" y="32" width="1400" height="907" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26067746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -402,7 +409,8 @@
     <MESSAGE value="Exposing some stuff of the plugin so we can customize on the other side." />
     <MESSAGE value="Update" />
     <MESSAGE value="Bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bugfix" />
+    <MESSAGE value="Removing emojione" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removing emojione" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/babel.config.js">
@@ -561,8 +569,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="122" column="37" lean-forward="true" selection-start-line="122" selection-start-column="37" selection-end-line="122" selection-end-column="37" />
+        <state relative-caret-position="156">
+          <caret line="110" column="24" lean-forward="true" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
