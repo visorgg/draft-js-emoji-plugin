@@ -124,7 +124,6 @@ export default (config = {}) => {
         attachImmutableEntitiesToEmojis: attachImmutableEntitiesToEmojis,
       },
       setPriorityList: emojiList.setPriorityList,
-      setEmojiImageNameGetter: setEmojiImageNameGetter,
       setShortNameGetter: setShortNameGetter,
       clearEmojiList: clearEmojiList,
       mergeEmojiList: mergeEmojiList,
