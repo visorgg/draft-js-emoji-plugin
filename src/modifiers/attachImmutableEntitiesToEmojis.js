@@ -2,7 +2,7 @@ import { EditorState, Modifier, SelectionState } from 'draft-js';
 import findWithRegex from 'find-with-regex';
 import mayhemEmoji from '../utils/mayhemEmoji';
 
-const unicodeRegex = new RegExp(mayhemEmoji.unicodeRegexp, 'g');
+const unicodeRegex = mayhemEmoji.unicodeRegexp;
 
 /*
  * Attaches Immutable DraftJS Entities to the Emoji text.
