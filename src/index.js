@@ -5,7 +5,6 @@ import { EditorState } from 'draft-js';
 import Emoji from './components/Emoji';
 import EmojiSuggestions from './components/EmojiSuggestions';
 import EmojiSuggestionsPortal from './components/EmojiSuggestionsPortal';
-import EmojiSelect from './components/EmojiSelect';
 import emojiStrategy from './emojiStrategy';
 import emojiSuggestionsStrategy from './emojiSuggestionsStrategy';
 import attachImmutableEntitiesToEmojis from './modifiers/attachImmutableEntitiesToEmojis';
@@ -156,9 +155,6 @@ export default (config = {}) => {
   const DecoratedEmojiSuggestions = props => (
     <EmojiSuggestions {...props} {...suggestionsProps} />
   );
-  const DecoratedEmojiSelect = props => (
-    <EmojiSelect {...props} {...selectProps} />
-  );
   const DecoratedEmoji = props => (
     <Emoji
       {...props}
@@ -174,7 +170,6 @@ export default (config = {}) => {
   );
   return {
     EmojiSuggestions: DecoratedEmojiSuggestions,
-    EmojiSelect: DecoratedEmojiSelect,
     decorators: [
       {
         strategy: emojiStrategy,

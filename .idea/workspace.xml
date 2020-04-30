@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3439b0cc-997f-408e-9a67-4d6d9eb07259" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/index.cjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.cjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/index.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EmojiSelect/Popover/Entry/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EmojiSelect/Popover/Groups/Group/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EmojiSelect/Popover/Groups/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EmojiSelect/Popover/Nav/Entry/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EmojiSelect/Popover/Nav/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EmojiSelect/Popover/ToneSelect/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EmojiSelect/Popover/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EmojiSelect/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mayhemEmoji.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mayhemEmoji.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="110" column="24" lean-forward="true" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
+            <state relative-caret-position="307">
+              <caret line="168" column="55" lean-forward="true" selection-start-line="168" selection-start-column="55" selection-end-line="168" selection-end-column="55" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -27,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/utils/mayhemEmoji.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="31" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="31" />
+            <state relative-caret-position="255">
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -48,7 +60,6 @@
       <find>emojione.emojioneList</find>
       <find>import emojione from 'emojione';</find>
       <find>toShort(</find>
-      <find>emojione</find>
       <find>setPriorityList</find>
       <find>priorityList</find>
       <find>toShort</find>
@@ -62,9 +73,11 @@
       <find>getShortnameFromEmoji</find>
       <find>mayhemEmojione</find>
       <find>emojioneList</find>
-      <find>shortNames</find>
       <find>MAYHEM_EMOJI_CONFIG</find>
       <find>MAYHEM_EMOJI_CONFIG.</find>
+      <find>shortNames</find>
+      <find>emojione</find>
+      <find>EmojiSelect</find>
     </findStrings>
     <replaceStrings>
       <replace>,</replace>
@@ -96,12 +109,12 @@
         <option value="$PROJECT_DIR$/src/constants/supportedEmojis.js" />
         <option value="$PROJECT_DIR$/src/utils/emojiList.js" />
         <option value="$PROJECT_DIR$/src/utils/mayhemEmojione.js" />
-        <option value="$PROJECT_DIR$/src/utils/mayhemEmoji.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/EmojiSuggestions/Entry/index.js" />
         <option value="$PROJECT_DIR$/src/components/EmojiSelect/Popover/Entry/index.js" />
         <option value="$PROJECT_DIR$/src/components/Emoji/index.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/utils/mayhemEmoji.js" />
       </list>
     </option>
   </component>
@@ -356,17 +369,24 @@
       <option name="project" value="LOCAL" />
       <updated>1588222070642</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Removing emojione">
+      <created>1588222164926</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1588222164926</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12821000" />
+    <option name="totallyTimeSpent" value="13938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="244" y="32" width="1400" height="907" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26067746" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26067746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -381,13 +401,13 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="GraphQL" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32883435" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32883435" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="TypeScript" order="14" />
+      <window_info anchor="bottom" id="TypeScript" order="14" weight="0.32883435" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -470,15 +490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/EmojiSelect/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/constants/supportedEmojis.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -553,13 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/mayhemEmoji.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -567,13 +571,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/EmojiSelect/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="110" column="24" lean-forward="true" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
+        <state relative-caret-position="307">
+          <caret line="168" column="55" lean-forward="true" selection-start-line="168" selection-start-column="55" selection-end-line="168" selection-end-column="55" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/mayhemEmoji.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>

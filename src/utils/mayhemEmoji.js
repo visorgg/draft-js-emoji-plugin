@@ -1,25 +1,25 @@
-const MAYHEM_EMOJIONE = {
+const MAYHEM_EMOJI = {
   toShort: str => str,
   getShortnameFromEmoji: () => "",
   emojiList: {},
 };
 
 export const mergeEmojiList = (emojiList) => {
-  Object.assign(MAYHEM_EMOJIONE, { emojiList });
+  Object.assign(MAYHEM_EMOJI, { emojiList });
 };
 
 export const clearEmojiList = () => {
-  Object.keys(MAYHEM_EMOJIONE).forEach(function(key) { delete object[key]; });
+  Object.keys(MAYHEM_EMOJI).forEach(function(key) { delete object[key]; });
 };
 
 export const setEmojiImageNameGetter = (callback) => {
-  Object.assign(MAYHEM_EMOJIONE, {
+  Object.assign(MAYHEM_EMOJI, {
     getShortnameFromEmoji: callback,
   });
 };
 
 export const setShortNameGetter = (callback) => {
-  Object.assign(MAYHEM_EMOJIONE, { toShort: callback });
+  Object.assign(MAYHEM_EMOJI, { toShort: callback });
 };
 
-export default MAYHEM_EMOJIONE;
+export default MAYHEM_EMOJI;
