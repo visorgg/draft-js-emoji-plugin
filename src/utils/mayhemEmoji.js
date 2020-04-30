@@ -3,7 +3,7 @@ import unicodeRegexp from "../constants/unicodeRegexp";
 const MAYHEM_EMOJI = {
   unicodeRegexp: unicodeRegexp,
   toShort: str => str,
-  getShortnameFromEmoji: () => "",
+  getImagePathForEmoji: () => "",
   emojiList: {},
 };
 
@@ -15,14 +15,12 @@ export const clearEmojiList = () => {
   Object.keys(MAYHEM_EMOJI).forEach(function(key) { delete object[key]; });
 };
 
-export const setEmojiImageNameGetter = (callback) => {
-  Object.assign(MAYHEM_EMOJI, {
-    getShortnameFromEmoji: callback,
-  });
-};
-
 export const setShortNameGetter = (callback) => {
   Object.assign(MAYHEM_EMOJI, { toShort: callback });
+};
+
+export const setEmojiImagePathGetter = (callback) => {
+  Object.assign(MAYHEM_EMOJI, { getImagePathForEmoji: callback });
 };
 
 export default MAYHEM_EMOJI;

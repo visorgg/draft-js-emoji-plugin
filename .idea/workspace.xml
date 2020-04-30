@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3439b0cc-997f-408e-9a67-4d6d9eb07259" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/emojiSuggestionsStrategy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/emojiSuggestionsStrategy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Emoji/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Emoji/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EmojiSuggestions/Entry/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EmojiSuggestions/Entry/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mayhemEmoji.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mayhemEmoji.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,91 +20,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/modifiers/addEmoji.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="96" column="21" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/modifiers/attachImmutableEntitiesToEmojis.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="12" column="55" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Emoji/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="53" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/emojiStrategy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/EmojiSuggestions/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="202" column="40" lean-forward="true" selection-start-line="202" selection-start-column="40" selection-end-line="202" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/emojiSuggestionsStrategy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/emojiList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="164">
+              <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -108,17 +31,32 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/utils/mayhemEmoji.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="25" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="25" />
+            <state relative-caret-position="195">
+              <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/constants/unicodeRegexp.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Emoji/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            <state relative-caret-position="166">
+              <caret line="24" column="58" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/EmojiSuggestions/Entry/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+              <folding>
+                <element signature="e#0#60#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,13 +65,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>setPriorityList</find>
-      <find>priorityList</find>
-      <find>toShort</find>
-      <find>emojiList</find>
-      <find>setEmojiImageNameGetter</find>
       <find>import attac</find>
-      <find>shortNameForImage</find>
       <find>emojione.</find>
       <find>mayhemEmojione.</find>
       <find>mayhemEmojione</find>
@@ -142,7 +74,6 @@
       <find>MAYHEM_EMOJI_CONFIG.</find>
       <find>shortNames</find>
       <find>emojione</find>
-      <find>getShortnameFromEmoji</find>
       <find>addEmoji</find>
       <find>mayhemEmoji.</find>
       <find>unicodeRe</find>
@@ -157,6 +88,13 @@
       <find>DecoratedEmoji</find>
       <find>addEmoji(</find>
       <find>convertShortNameToUnicode</find>
+      <find>shortNameForImage</find>
+      <find>const fullImagePath = mayhemEmoji.getImagePathForEmoji(emojiObj);</find>
+      <find>shortNameFor</find>
+      <find>getImagePathForEmoji</find>
+      <find>getShortnameFromEmoji</find>
+      <find>setEmojiImageNameGetter</find>
+      <find>.toShort</find>
     </findStrings>
     <replaceStrings>
       <replace>,</replace>
@@ -187,17 +125,17 @@
         <option value="$PROJECT_DIR$/src/utils/mayhemEmojione.js" />
         <option value="$PROJECT_DIR$/src/components/EmojiSelect/Popover/Entry/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/utils/mayhemEmoji.js" />
         <option value="$PROJECT_DIR$/src/emojiStrategy.js" />
         <option value="$PROJECT_DIR$/src/modifiers/attachImmutableEntitiesToEmojis.js" />
-        <option value="$PROJECT_DIR$/src/components/Emoji/index.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/utils/emojiList.js" />
-        <option value="$PROJECT_DIR$/src/components/EmojiSuggestions/Entry/index.js" />
         <option value="$PROJECT_DIR$/src/utils/mappedUnicode.js" />
         <option value="$PROJECT_DIR$/src/modifiers/addEmoji.js" />
         <option value="$PROJECT_DIR$/src/constants/unicodeRegexp.js" />
         <option value="$PROJECT_DIR$/src/emojiSuggestionsStrategy.js" />
+        <option value="$PROJECT_DIR$/src/components/Emoji/index.js" />
+        <option value="$PROJECT_DIR$/src/components/EmojiSuggestions/Entry/index.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/utils/mayhemEmoji.js" />
       </list>
     </option>
   </component>
@@ -517,14 +455,22 @@
       <option name="project" value="LOCAL" />
       <updated>1588269622118</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Updates">
+      <created>1588286157218</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1588286157218</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30055000" />
+    <option name="totallyTimeSpent" value="33041000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="244" y="32" width="1400" height="907" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26067746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -663,16 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/EmojiSuggestions/Entry/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/convertShortNameToUnicode.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -682,9 +618,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/decodeOffsetKey.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/getSearchText.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -712,53 +645,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modifiers/attachImmutableEntitiesToEmojis.js">
+    <entry file="file://$PROJECT_DIR$/src/utils/emojiList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="12" column="55" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="55" />
+        <state relative-caret-position="114">
+          <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Emoji/index.js">
+    <entry file="file://$PROJECT_DIR$/src/emojiSuggestionsStrategy.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="53" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="53" />
+        <state relative-caret-position="60">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/unicodeRegexp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/EmojiSuggestions/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
-          <caret line="202" column="40" lean-forward="true" selection-start-line="202" selection-start-column="40" selection-end-line="202" selection-end-column="40" />
+          <caret line="202" column="40" selection-start-line="202" selection-start-column="40" selection-end-line="202" selection-end-column="40" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/emojiList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -773,20 +682,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/emojiSuggestionsStrategy.js">
+    <entry file="file://$PROJECT_DIR$/src/modifiers/attachImmutableEntitiesToEmojis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+        <state relative-caret-position="73">
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/decodeOffsetKey.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants/unicodeRegexp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/EmojiSuggestions/Entry/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Emoji/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="24" column="58" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/mayhemEmoji.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="25" />
+        <state relative-caret-position="195">
+          <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
         </state>
       </provider>
     </entry>

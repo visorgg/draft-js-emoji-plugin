@@ -55,8 +55,8 @@ export default class Entry extends Component {
     } else {
       // short name to image url code steal from emojione source code
       const emojiObj = mayhemEmoji.emojiList[this.props.emoji];
-      const shortNameForImage = mayhemEmoji.getShortnameFromEmoji(emojiObj);
-      const fullImagePath = `${imagePath}${shortNameForImage}.${imageType}${cacheBustParam}`;
+      const fullImagePath = mayhemEmoji.getImagePathForEmoji(emojiObj);
+
       emojiDisplay = (
         <img
           src={fullImagePath}

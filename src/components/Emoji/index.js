@@ -22,8 +22,8 @@ const Emoji = ({
   } else {
     // short name to image url code steal from emojione source code
     const emojiObj = mayhemEmoji.emojiList[shortName];
-    const shortNameForImage = mayhemEmoji.getShortnameFromEmoji(emojiObj);
-    const backgroundImage = `url(${imagePath}${shortNameForImage}.${imageType}${cacheBustParam})`;
+    const fullImagePath = mayhemEmoji.getImagePathForEmoji(emojiObj);
+    const backgroundImage = `url(${fullImagePath})`;
     const combinedClassName = clsx(theme.emoji, className);
 
     emojiDisplay = (

@@ -14,7 +14,7 @@ import addEmoji from './modifiers/addEmoji';
 
 import { defaultTheme } from './theme.js';
 
-import { clearEmojiList, mergeEmojiList, setEmojiImageNameGetter, setShortNameGetter } from "./utils/mayhemEmoji";
+import { clearEmojiList, mergeEmojiList, setEmojiImagePathGetter, setShortNameGetter } from "./utils/mayhemEmoji";
 
 export { defaultTheme };
 
@@ -89,7 +89,7 @@ export default (config = {}) => {
     toneSelectOpenDelay,
     useNativeArt,
     emojiListOverride,
-    emojiImageNameGetter,
+    getImagePathForEmoji,
     shortNameGetter,
     unicodeGetter,
     expose,
@@ -98,8 +98,8 @@ export default (config = {}) => {
   const cacheBustParam = allowImageCache ? '' : defaultCacheBustParam;
 
   // Update the name getter if possible, this allows us to define what name to use for this image.
-  if (emojiImageNameGetter) {
-    setEmojiImageNameGetter(emojiImageNameGetter);
+  if (getImagePathForEmoji) {
+    setEmojiImagePathGetter(getImagePathForEmoji);
   }
 
   if (shortNameGetter) {
