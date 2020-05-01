@@ -2,9 +2,9 @@ import React, {
   // PropTypes,
   Component,
 } from 'react';
-import emojione from 'emojione';
+import mayhemEmoji from '../../../utils/mayhemEmoji';
 import emojiList from '../../../utils/emojiList';
-import convertShortNameToUnicode from '../../../utils/convertShortNameToUnicode';
+import convertUnicodeToNativeEmoji from '../../../utils/convertUnicodeToNativeEmoji';
 
 export default class Entry extends Component {
   constructor(props) {
@@ -50,15 +50,13 @@ export default class Entry extends Component {
 
     let emojiDisplay = null;
     if (useNativeArt === true) {
-      const unicode = emojiList.list[this.props.emoji][0];
-      emojiDisplay = convertShortNameToUnicode(unicode);
+      const unicode = emojiList.list[this.props.emoji];
+      emojiDisplay = convertUnicodeToNativeEmoji(unicode);
     } else {
       // short name to image url code steal from emojione source code
-      const shortNameForImage =
-        emojione.emojioneList[this.props.emoji].unicode[
-          emojione.emojioneList[this.props.emoji].unicode.length - 1
-        ];
-      const fullImagePath = `${imagePath}${shortNameForImage}.${imageType}${cacheBustParam}`;
+      const emojiObj = mayhemEmoji.emojiList[this.props.emoji];
+      const fullImagePath = mayhemEmoji.getImagePathForEmoji(emojiObj);
+
       emojiDisplay = (
         <img
           src={fullImagePath}

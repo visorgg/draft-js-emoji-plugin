@@ -1,7 +1,7 @@
 import { Modifier, EditorState } from 'draft-js';
 import getSearchText from '../utils/getSearchText';
 import emojiList from '../utils/emojiList';
-import convertShortNameToUnicode from '../utils/convertShortNameToUnicode';
+import convertUnicodeToNativeEmoji from '../utils/convertUnicodeToNativeEmoji';
 
 // This modifier can inserted emoji to current cursor position (with replace selected fragment),
 // or replaced emoji shortname like ":thumbsup:". Behavior determined by `Mode` parameter.
@@ -11,8 +11,8 @@ const Mode = {
 };
 
 const addEmoji = (editorState, emojiShortName, mode = Mode.INSERT) => {
-  const unicode = emojiList.list[emojiShortName][0];
-  const emoji = convertShortNameToUnicode(unicode);
+  const unicode = emojiList.list[emojiShortName];
+  const emoji = convertUnicodeToNativeEmoji(unicode);
 
   const contentState = editorState.getCurrentContent();
   const contentStateWithEntity = contentState.createEntity(

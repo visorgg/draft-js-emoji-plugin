@@ -1,7 +1,9 @@
 /* eslint-disable */
 
 // Original can be found here: https://github.com/Ranks/emojione
-const convertShortNameToUnicode = function(unicode) {
+// @puopg: Renamed this function since it seems to be named weirdly. OG name was "convertShortNameToUnicode".
+// Like, wtf, the INPUT is a variable called "unicode"... This shit returns native emoji.
+const convertUnicodeToNativeEmoji = function(unicode) {
   if (unicode.indexOf('-') > -1) {
     var parts = [];
     var s = unicode.split('-');
@@ -31,4 +33,4 @@ const convertShortNameToUnicode = function(unicode) {
   }
 };
 
-export default convertShortNameToUnicode;
+export default convertUnicodeToNativeEmoji;

@@ -4,6 +4,7 @@ import Entry from './Entry';
 import addEmoji, { Mode as AddEmojiMode } from '../../modifiers/addEmoji';
 import getSearchText from '../../utils/getSearchText';
 import decodeOffsetKey from '../../utils/decodeOffsetKey';
+import MAYHEM_EMOJI from "../../utils/mayhemEmoji";
 
 export default class EmojiSuggestions extends Component {
   state = {
@@ -199,12 +200,19 @@ export default class EmojiSuggestions extends Component {
 
   onEmojiSelect = emoji => {
     this.closeDropdown();
-    const newEditorState = addEmoji(
-      this.props.store.getEditorState(),
-      emoji,
-      AddEmojiMode.REPLACE
-    );
-    this.props.store.setEditorState(newEditorState);
+
+    // If we hit a custom "emoji", let the app handle it.
+    if (MAYHEM_EMOJI.customEmojiMap[emoji]) {
+      MAYHEM_EMOJI.addCustomEmoji(emoji);
+    } else {
+      const newEditorState = addEmoji(
+        this.props.store.getEditorState(),
+        emoji,
+        AddEmojiMode.REPLACE
+      );
+
+      this.props.store.setEditorState(newEditorState);
+    }
   };
 
   onEmojiFocus = index => {

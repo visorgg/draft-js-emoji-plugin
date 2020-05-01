@@ -1,23 +1,31 @@
 import React from 'react';
 import { Map, List } from 'immutable';
 import keys from 'lodash/keys';
-import { EditorState } from 'draft-js';
 import Emoji from './components/Emoji';
 import EmojiSuggestions from './components/EmojiSuggestions';
 import EmojiSuggestionsPortal from './components/EmojiSuggestionsPortal';
-import EmojiSelect from './components/EmojiSelect';
 import emojiStrategy from './emojiStrategy';
 import emojiSuggestionsStrategy from './emojiSuggestionsStrategy';
-import attachImmutableEntitiesToEmojis from './modifiers/attachImmutableEntitiesToEmojis';
 import defaultPositionSuggestions from './utils/positionSuggestions';
 import emojiList from './utils/emojiList';
+import addEmoji from './modifiers/addEmoji';
+
 import { defaultTheme } from './theme.js';
+
+import {
+  clearEmojiList,
+  mergeEmojiList,
+  setCustomEmojiMap,
+  setCustomEmojiHandler,
+  setEmojiImagePathGetter,
+  setShortNameGetter,
+} from "./utils/mayhemEmoji";
 
 export { defaultTheme };
 
-const defaultImagePath = '//cdn.jsdelivr.net/emojione/assets/svg/';
+const defaultImagePath = '//twemoji.maxcdn.com/svg/'; // Update to point to twitter emoji by default
 const defaultImageType = 'svg';
-const defaultCacheBustParam = '?v=2.2.7';
+const defaultCacheBustParam = '?v=1.0.0'; // We are now on version 1.0.0 of our emojis.
 
 // TODO activate/deactivate different the conversion or search part
 
@@ -85,12 +93,55 @@ export default (config = {}) => {
     selectButtonContent,
     toneSelectOpenDelay,
     useNativeArt,
+    customEmojiMap = {},
+    customEmojiHandler,
+    emojiListOverride,
+    getImagePathForEmoji,
+    shortNameGetter,
+    unicodeGetter,
+    expose,
   } = config;
 
   const cacheBustParam = allowImageCache ? '' : defaultCacheBustParam;
 
-  // if priorityList is configured in config then set priorityList
-  if (priorityList) emojiList.setPriorityList(priorityList);
+  // Update the name getter if possible, this allows us to define what name to use for this image.
+  if (getImagePathForEmoji) {
+    setEmojiImagePathGetter(getImagePathForEmoji);
+  }
+
+  if (shortNameGetter) {
+    setShortNameGetter(shortNameGetter);
+  }
+
+  // Adjust the plugin to accept an emoji list to merge.
+  if (emojiListOverride) {
+    mergeEmojiList(emojiListOverride);
+  }
+
+  if (customEmojiHandler) {
+    setCustomEmojiHandler(customEmojiHandler);
+  }
+
+  if (unicodeGetter) emojiList.setUnicodeGetter(unicodeGetter);
+
+  // Populate the emojiList
+  emojiList.setPriorityList(priorityList || {});
+  setCustomEmojiMap(customEmojiMap);
+
+  // Expose some of this plugins state to the invoker so that they can control some core pieces
+  if (expose) {
+    expose({
+      modifiers: {
+        addEmoji: addEmoji,
+      },
+      setCustomEmojiMap: setCustomEmojiMap,
+      setPriorityList: emojiList.setPriorityList,
+      setShortNameGetter: setShortNameGetter,
+      clearEmojiList: clearEmojiList,
+      mergeEmojiList: mergeEmojiList,
+    });
+  }
+
   const suggestionsProps = {
     ariaProps,
     cacheBustParam,
@@ -117,9 +168,6 @@ export default (config = {}) => {
   const DecoratedEmojiSuggestions = props => (
     <EmojiSuggestions {...props} {...suggestionsProps} />
   );
-  const DecoratedEmojiSelect = props => (
-    <EmojiSelect {...props} {...selectProps} />
-  );
   const DecoratedEmoji = props => (
     <Emoji
       {...props}
@@ -135,7 +183,6 @@ export default (config = {}) => {
   );
   return {
     EmojiSuggestions: DecoratedEmojiSuggestions,
-    EmojiSelect: DecoratedEmojiSelect,
     decorators: [
       {
         strategy: emojiStrategy,
@@ -165,25 +212,9 @@ export default (config = {}) => {
     handleReturn: keyboardEvent =>
       callbacks.handleReturn && callbacks.handleReturn(keyboardEvent),
     onChange: editorState => {
-      let newEditorState = attachImmutableEntitiesToEmojis(editorState);
+      if (callbacks.onChange) return callbacks.onChange(editorState);
 
-      if (
-        !newEditorState
-          .getCurrentContent()
-          .equals(editorState.getCurrentContent())
-      ) {
-        // Forcing the current selection ensures that it will be at it's right place.
-        // This solves the issue where inserting an Emoji on OSX with Apple's Emoji
-        // selector led to the right selection the data, but wrong position in
-        // the contenteditable.
-        newEditorState = EditorState.forceSelection(
-          newEditorState,
-          newEditorState.getSelection()
-        );
-      }
-
-      if (callbacks.onChange) return callbacks.onChange(newEditorState);
-      return newEditorState;
+      return editorState;
     },
   };
 };
