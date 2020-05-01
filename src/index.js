@@ -128,6 +128,7 @@ export default (config = {}) => {
 
   // Populate the emojiList
   emojiList.setPriorityList(priorityList || {});
+  setCustomEmojiMap(customEmojiMap);
 
   // Expose some of this plugins state to the invoker so that they can control some core pieces
   if (expose) {
