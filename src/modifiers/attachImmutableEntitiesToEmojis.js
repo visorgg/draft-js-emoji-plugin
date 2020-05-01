@@ -5,6 +5,12 @@ import mayhemEmoji from '../utils/mayhemEmoji';
 const unicodeRegex = new RegExp(mayhemEmoji.unicodeRegexp, 'g');
 
 /*
+ * @puopg: PLEASE READ, IMPORTANT!!
+ * I am removing this as it seems to affect undo behavior when pasting text and also it screws up cursor positioning
+ * when handling the paste text event from our main code. The comment below is from the original plugin,
+ * and it does not seem to be an issue for us, possibly due to some changes we have made, but backspace is totally
+ * fine from my experimentation.
+ *
  * Attaches Immutable DraftJS Entities to the Emoji text.
  *
  * This is necessary as emojis consist of 2 characters (unicode). By making them

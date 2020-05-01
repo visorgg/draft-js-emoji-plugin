@@ -4,7 +4,7 @@ import React, {
 } from 'react';
 import mayhemEmoji from '../../../utils/mayhemEmoji';
 import emojiList from '../../../utils/emojiList';
-import convertShortNameToUnicode from '../../../utils/convertShortNameToUnicode';
+import convertUnicodeToNativeEmoji from '../../../utils/convertUnicodeToNativeEmoji';
 
 export default class Entry extends Component {
   constructor(props) {
@@ -51,7 +51,7 @@ export default class Entry extends Component {
     let emojiDisplay = null;
     if (useNativeArt === true) {
       const unicode = emojiList.list[this.props.emoji];
-      emojiDisplay = convertShortNameToUnicode(unicode);
+      emojiDisplay = convertUnicodeToNativeEmoji(unicode);
     } else {
       // short name to image url code steal from emojione source code
       const emojiObj = mayhemEmoji.emojiList[this.props.emoji];

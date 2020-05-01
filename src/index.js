@@ -1,13 +1,11 @@
 import React from 'react';
 import { Map, List } from 'immutable';
 import keys from 'lodash/keys';
-import { EditorState } from 'draft-js';
 import Emoji from './components/Emoji';
 import EmojiSuggestions from './components/EmojiSuggestions';
 import EmojiSuggestionsPortal from './components/EmojiSuggestionsPortal';
 import emojiStrategy from './emojiStrategy';
 import emojiSuggestionsStrategy from './emojiSuggestionsStrategy';
-import attachImmutableEntitiesToEmojis from './modifiers/attachImmutableEntitiesToEmojis';
 import defaultPositionSuggestions from './utils/positionSuggestions';
 import emojiList from './utils/emojiList';
 import addEmoji from './modifiers/addEmoji';
@@ -135,7 +133,6 @@ export default (config = {}) => {
     expose({
       modifiers: {
         addEmoji: addEmoji,
-        attachImmutableEntitiesToEmojis: attachImmutableEntitiesToEmojis,
       },
       setCustomEmojiMap: setCustomEmojiMap,
       setPriorityList: emojiList.setPriorityList,
@@ -215,25 +212,9 @@ export default (config = {}) => {
     handleReturn: keyboardEvent =>
       callbacks.handleReturn && callbacks.handleReturn(keyboardEvent),
     onChange: editorState => {
-      let newEditorState = attachImmutableEntitiesToEmojis(editorState);
+      if (callbacks.onChange) return callbacks.onChange(editorState);
 
-      if (
-        !newEditorState
-          .getCurrentContent()
-          .equals(editorState.getCurrentContent())
-      ) {
-        // Forcing the current selection ensures that it will be at it's right place.
-        // This solves the issue where inserting an Emoji on OSX with Apple's Emoji
-        // selector led to the right selection the data, but wrong position in
-        // the contenteditable.
-        newEditorState = EditorState.forceSelection(
-          newEditorState,
-          newEditorState.getSelection()
-        );
-      }
-
-      if (callbacks.onChange) return callbacks.onChange(newEditorState);
-      return newEditorState;
+      return editorState;
     },
   };
 };
