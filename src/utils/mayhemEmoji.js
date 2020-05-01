@@ -5,6 +5,8 @@ const MAYHEM_EMOJI = {
   toShort: str => str,
   getImagePathForEmoji: () => "",
   emojiList: {},
+  customEmojiMap: {},
+  addCustomEmoji: () => {},
 };
 
 export const mergeEmojiList = (emojiList) => {
@@ -21,6 +23,14 @@ export const setShortNameGetter = (callback) => {
 
 export const setEmojiImagePathGetter = (callback) => {
   Object.assign(MAYHEM_EMOJI, { getImagePathForEmoji: callback });
+};
+
+export const setCustomEmojiMap = (customEmojiMap) => {
+  MAYHEM_EMOJI.customEmojiMap = customEmojiMap;
+};
+
+export const setCustomEmojiHandler = (callback) => {
+  MAYHEM_EMOJI.addCustomEmoji = callback;
 };
 
 export default MAYHEM_EMOJI;

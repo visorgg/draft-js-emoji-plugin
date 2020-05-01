@@ -14,7 +14,14 @@ import addEmoji from './modifiers/addEmoji';
 
 import { defaultTheme } from './theme.js';
 
-import { clearEmojiList, mergeEmojiList, setEmojiImagePathGetter, setShortNameGetter } from "./utils/mayhemEmoji";
+import {
+  clearEmojiList,
+  mergeEmojiList,
+  setCustomEmojiMap,
+  setCustomEmojiHandler,
+  setEmojiImagePathGetter,
+  setShortNameGetter,
+} from "./utils/mayhemEmoji";
 
 export { defaultTheme };
 
@@ -88,6 +95,8 @@ export default (config = {}) => {
     selectButtonContent,
     toneSelectOpenDelay,
     useNativeArt,
+    customEmojiMap = {},
+    customEmojiHandler,
     emojiListOverride,
     getImagePathForEmoji,
     shortNameGetter,
@@ -111,6 +120,10 @@ export default (config = {}) => {
     mergeEmojiList(emojiListOverride);
   }
 
+  if (customEmojiHandler) {
+    setCustomEmojiHandler(customEmojiHandler);
+  }
+
   if (unicodeGetter) emojiList.setUnicodeGetter(unicodeGetter);
 
   // Populate the emojiList
@@ -123,6 +136,7 @@ export default (config = {}) => {
         addEmoji: addEmoji,
         attachImmutableEntitiesToEmojis: attachImmutableEntitiesToEmojis,
       },
+      setCustomEmojiMap: setCustomEmojiMap,
       setPriorityList: emojiList.setPriorityList,
       setShortNameGetter: setShortNameGetter,
       clearEmojiList: clearEmojiList,
