@@ -6,7 +6,6 @@ import EmojiSuggestions from './components/EmojiSuggestions';
 import EmojiSuggestionsPortal from './components/EmojiSuggestionsPortal';
 import emojiStrategy from './emojiStrategy';
 import emojiSuggestionsStrategy from './emojiSuggestionsStrategy';
-import defaultPositionSuggestions from './utils/positionSuggestions';
 import emojiList from './utils/emojiList';
 import addEmoji from './modifiers/addEmoji';
 
@@ -22,10 +21,6 @@ import {
 } from "./utils/mayhemEmoji";
 
 export { defaultTheme };
-
-const defaultImagePath = '//twemoji.maxcdn.com/svg/'; // Update to point to twitter emoji by default
-const defaultImageType = 'svg';
-const defaultCacheBustParam = '?v=1.0.0'; // We are now on version 1.0.0 of our emojis.
 
 // TODO activate/deactivate different the conversion or search part
 
@@ -83,14 +78,7 @@ export default (config = {}) => {
   // errors when upgrading as basically every styling change would become a major
   // breaking change. 1px of an increased padding can break a whole layout.
   const {
-    imagePath = defaultImagePath,
-    imageType = defaultImageType,
-    allowImageCache,
-    positionSuggestions = defaultPositionSuggestions,
     priorityList,
-    selectGroups,
-    selectButtonContent,
-    toneSelectOpenDelay,
     useNativeArt,
     customEmojiMap = {},
     customEmojiHandler,
@@ -103,7 +91,6 @@ export default (config = {}) => {
   } = config;
 
   const theme = config.theme ? { ...defaultTheme, ...config.theme } : defaultTheme;
-  const cacheBustParam = allowImageCache ? '' : defaultCacheBustParam;
 
   // Update the name getter if possible, this allows us to define what name to use for this image.
   if (getImagePathForEmoji) {
@@ -145,28 +132,14 @@ export default (config = {}) => {
 
   const suggestionsProps = {
     ariaProps,
-    cacheBustParam,
     callbacks,
-    imagePath,
-    imageType,
     theme,
     store,
-    positionSuggestions,
     shortNames: List(keys(emojiList.list)),
     useNativeArt,
     customEntryComponent,
   };
-  const selectProps = {
-    cacheBustParam,
-    imagePath,
-    imageType,
-    theme,
-    store,
-    selectGroups,
-    selectButtonContent,
-    toneSelectOpenDelay,
-    useNativeArt,
-  };
+
   const DecoratedEmojiSuggestions = props => (
     <EmojiSuggestions {...props} {...suggestionsProps} />
   );
@@ -174,9 +147,6 @@ export default (config = {}) => {
     <Emoji
       {...props}
       theme={theme}
-      imagePath={imagePath}
-      imageType={imageType}
-      cacheBustParam={cacheBustParam}
       useNativeArt={useNativeArt}
     />
   );

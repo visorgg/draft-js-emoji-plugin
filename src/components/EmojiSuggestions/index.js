@@ -32,22 +32,6 @@ export default class EmojiSuggestions extends Component {
       if (size <= 0) {
         this.closeDropdown();
       }
-
-      const decoratorRect = this.props.store.getPortalClientRect(
-        this.activeOffsetKey
-      );
-      const newStyles = this.props.positionSuggestions({
-        decoratorRect,
-        prevProps,
-        prevState,
-        props: this.props,
-        state: this.state,
-        filteredEmojis: this.filteredEmojis,
-        popover: this.popover,
-      });
-      Object.keys(newStyles).forEach(key => {
-        this.popover.style[key] = newStyles[key];
-      });
     }
   }
 
@@ -316,18 +300,15 @@ export default class EmojiSuggestions extends Component {
     const EntryComponent = this.props.customEntryComponent ? this.props.customEntryComponent : Entry;
     const {
       theme = {},
-      cacheBustParam,
-      imagePath,
-      imageType,
       ariaProps, // eslint-disable-line no-unused-vars
       callbacks, // eslint-disable-line no-unused-vars
       onClose, // eslint-disable-line no-unused-vars
       onOpen, // eslint-disable-line no-unused-vars
       onSearchChange, // eslint-disable-line no-unused-vars
-      positionSuggestions, // eslint-disable-line no-unused-vars
       shortNames, // eslint-disable-line no-unused-vars
       store, // eslint-disable-line no-unused-vars
       useNativeArt,
+      customEntryComponent, // eslint-disable-line no-unused-vars
       ...restProps
     } = this.props;
     return (
@@ -351,9 +332,6 @@ export default class EmojiSuggestions extends Component {
               index={index}
               id={`emoji-option-${this.key}-${index}`}
               theme={theme}
-              imagePath={imagePath}
-              imageType={imageType}
-              cacheBustParam={cacheBustParam}
               useNativeArt={useNativeArt}
               searchStr={word}
             />
