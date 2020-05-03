@@ -37,16 +37,11 @@ export default class Entry extends Component {
   render() {
     const {
       theme = {},
-      imagePath,
-      imageType,
-      cacheBustParam,
       useNativeArt,
       isFocused,
       id,
     } = this.props;
-    const className = isFocused
-      ? theme.emojiSuggestionsEntryFocused
-      : theme.emojiSuggestionsEntry;
+    const className = `${theme.emojiSuggestionsEntry} ${isFocused ? theme.emojiSuggestionsEntryFocused : ""}`;
 
     let emojiDisplay = null;
     if (useNativeArt === true) {
