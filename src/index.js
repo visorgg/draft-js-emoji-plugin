@@ -100,6 +100,7 @@ export default (config = {}) => {
     shortNameGetter,
     unicodeGetter,
     expose,
+    customEntryComponent,
   } = config;
 
   const cacheBustParam = allowImageCache ? '' : defaultCacheBustParam;
@@ -153,6 +154,7 @@ export default (config = {}) => {
     positionSuggestions,
     shortNames: List(keys(emojiList.list)),
     useNativeArt,
+    customEntryComponent,
   };
   const selectProps = {
     cacheBustParam,

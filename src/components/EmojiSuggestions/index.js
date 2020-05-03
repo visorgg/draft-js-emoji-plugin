@@ -305,7 +305,15 @@ export default class EmojiSuggestions extends Component {
       return null;
     }
 
+    const selection = this.props.store.getEditorState().getSelection();
+    const { word } = getSearchText(
+      this.props.store.getEditorState(),
+      selection
+    );
+
     this.filteredEmojis = this.getEmojisForFilter();
+
+    const EntryComponent = this.props.customEntryComponent ? this.props.customEntryComponent : Entry;
     const {
       theme = {},
       cacheBustParam,
@@ -334,7 +342,7 @@ export default class EmojiSuggestions extends Component {
       >
         {this.filteredEmojis
           .map((emoji, index) => (
-            <Entry
+            <EntryComponent
               key={emoji}
               onEmojiSelect={this.onEmojiSelect}
               onEmojiFocus={this.onEmojiFocus}
@@ -347,6 +355,7 @@ export default class EmojiSuggestions extends Component {
               imageType={imageType}
               cacheBustParam={cacheBustParam}
               useNativeArt={useNativeArt}
+              searchStr={word}
             />
           ))
           .toJS()}
