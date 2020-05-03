@@ -83,7 +83,6 @@ export default (config = {}) => {
   // errors when upgrading as basically every styling change would become a major
   // breaking change. 1px of an increased padding can break a whole layout.
   const {
-    theme = defaultTheme,
     imagePath = defaultImagePath,
     imageType = defaultImageType,
     allowImageCache,
@@ -103,6 +102,7 @@ export default (config = {}) => {
     customEntryComponent,
   } = config;
 
+  const theme = config.theme ? { ...defaultTheme, ...config.theme } : defaultTheme;
   const cacheBustParam = allowImageCache ? '' : defaultCacheBustParam;
 
   // Update the name getter if possible, this allows us to define what name to use for this image.
